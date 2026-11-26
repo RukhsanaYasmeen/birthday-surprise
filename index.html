@@ -899,5 +899,59 @@ document.addEventListener("keydown", function(event) {
 
 </script>
 
+    <!-- Background Birthday Music -->
+<div id="music-player">
+  <iframe
+    id="birthdayMusic"
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/piyLXuSrDYo?enablejsapi=1&autoplay=1&loop=1&playlist=piyLXuSrDYo"
+    title="Birthday Background Music"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+
+  <button id="musicButton" onclick="playBirthdayMusic()">
+    🎵 Play Birthday Music
+  </button>
+</div>
+
+<style>
+#musicButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #d9b56d, #f5dfaa);
+  color: #17112b;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #0005;
+}
+</style>
+
+<script>
+function playBirthdayMusic() {
+  const iframe = document.getElementById("birthdayMusic");
+
+  iframe.contentWindow.postMessage(
+    JSON.stringify({
+      event: "command",
+      func: "playVideo",
+      args: []
+    }),
+    "*"
+  );
+
+  document.getElementById("musicButton").innerText =
+    "🎶 Music Playing";
+}
+</script>
+
 </body>
 </html>
