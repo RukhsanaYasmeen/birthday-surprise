@@ -1,0 +1,903 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Beautiful Birthday Wish ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --night: #080D25;
+    --navy: #111B43;
+    --purple: #241B50;
+    --gold: #E7C982;
+    --lavender: #D9C5FF;
+    --cream: #FBF7EE;
+    --muted: #C4C9DF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--cream);
+    background:
+        radial-gradient(ellipse at 15% 20%, #293D86 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 80%, #49266F 0%, transparent 45%),
+        linear-gradient(135deg, var(--night), var(--navy), #170F32);
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    padding: 100px 22px;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 70px 20px 30px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 4;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 105px);
+    line-height: .95;
+    margin: 22px 0;
+    text-shadow: 0 5px 30px #0005;
+}
+
+.hero h1 span {
+    display: block;
+    font-size: .48em;
+    color: var(--lavender);
+    font-style: italic;
+    margin-top: 18px;
+}
+
+.hero p {
+    max-width: 540px;
+    color: var(--muted);
+    line-height: 1.9;
+    margin: 25px auto;
+}
+
+.small-flower {
+    color: var(--gold);
+    font-size: 26px;
+    margin: 15px;
+}
+
+.scroll-link {
+    display: inline-block;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid #E7C98277;
+    padding: 13px 28px;
+    border-radius: 40px;
+    margin-top: 18px;
+    transition: .3s;
+}
+
+.scroll-link:hover {
+    background: var(--gold);
+    color: var(--night);
+}
+
+/* BALLOONS */
+
+.balloon {
+    position: absolute;
+    width: 48px;
+    height: 62px;
+    border-radius: 50% 50% 45% 45%;
+    z-index: 2;
+    animation: floatBalloon 5s ease-in-out infinite;
+    box-shadow: inset -8px -8px 15px #0003,
+                0 10px 25px #0003;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 19px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid currentColor;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: 23px;
+    width: 1px;
+    height: 110px;
+    background: #E7C98266;
+}
+
+.balloon-one {
+    top: 12%;
+    left: 9%;
+    background: radial-gradient(circle at 30% 25%, #E9D9FF, #7552BD);
+    color: #7552BD;
+}
+
+.balloon-two {
+    top: 17%;
+    right: 9%;
+    background: radial-gradient(circle at 30% 25%, #FFF0C8, #B98B3D);
+    color: #B98B3D;
+    animation-delay: -2s;
+}
+
+.balloon-three {
+    top: 36%;
+    right: 20%;
+    transform: scale(.75);
+    background: radial-gradient(circle at 30% 25%, #C7D5FF, #526BC2);
+    color: #526BC2;
+    animation-delay: -3s;
+}
+
+.balloon-four {
+    top: 40%;
+    left: 17%;
+    transform: scale(.7);
+    background: radial-gradient(circle at 30% 25%, #F5D1E8, #A74E91);
+    color: #A74E91;
+    animation-delay: -1s;
+}
+
+@keyframes floatBalloon {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -18px; }
+}
+
+/* CAKE */
+
+.cake-scene {
+    position: relative;
+    width: 300px;
+    height: 240px;
+    margin: 40px auto 0;
+    animation: cakeFloat 5s ease-in-out infinite;
+}
+
+@keyframes cakeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+.plate {
+    position: absolute;
+    width: 280px;
+    height: 28px;
+    bottom: 5px;
+    left: 10px;
+    border-radius: 50%;
+    background: linear-gradient(#F8E9C9, #B58B48, #76552D);
+    box-shadow: 0 15px 30px #0007;
+}
+
+.bottom-cake {
+    position: absolute;
+    bottom: 22px;
+    left: 38px;
+    width: 225px;
+    height: 85px;
+    border-radius: 17px 17px 12px 12px;
+    background: linear-gradient(90deg, #68428E, #C5A0E5, #F0D7F6, #9B70C4);
+    box-shadow: inset 0 8px 12px #fff6,
+                inset 0 -12px 15px #39205C88;
+}
+
+.top-cake {
+    position: absolute;
+    bottom: 103px;
+    left: 68px;
+    width: 165px;
+    height: 65px;
+    border-radius: 16px 16px 10px 10px;
+    background: linear-gradient(90deg, #9466BD, #F0D9FA, #A47ACB);
+    box-shadow: inset 0 7px 10px #fff7;
+}
+
+.frosting {
+    position: absolute;
+    bottom: 157px;
+    left: 65px;
+    width: 171px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #FFF0D8, #FFFFFF, #E9D4F5);
+    z-index: 2;
+}
+
+.drip {
+    position: absolute;
+    bottom: 142px;
+    left: 82px;
+    width: 14px;
+    height: 25px;
+    background: #FFF0DF;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+    box-shadow: 45px 2px 0 #FFF0DF,
+                90px -2px 0 #FFF0DF,
+                125px 1px 0 #FFF0DF;
+}
+
+.candle {
+    position: absolute;
+    bottom: 172px;
+    width: 9px;
+    height: 38px;
+    border-radius: 3px;
+    background: repeating-linear-gradient(
+        135deg,
+        #FFF4D8 0 5px,
+        #B995E0 5px 10px
+    );
+    z-index: 4;
+}
+
+.candle.one { left: 112px; }
+.candle.two { left: 145px; height: 48px; bottom: 176px; }
+.candle.three { left: 178px; }
+
+.flame {
+    position: absolute;
+    top: -20px;
+    left: -2px;
+    width: 13px;
+    height: 19px;
+    border-radius: 60% 40% 60% 40%;
+    background: radial-gradient(ellipse, #FFF8C9 15%, #FFCF68 50%, #F18B42 75%);
+    filter: drop-shadow(0 0 10px #FFC75A);
+    animation: flicker .8s infinite alternate;
+}
+
+@keyframes flicker {
+    to { transform: scale(.8) rotate(8deg); }
+}
+
+/* LETTER */
+
+.letter-section {
+    background: linear-gradient(180deg, #101735aa, #171239dd);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(42px, 7vw, 68px);
+    margin-top: 12px;
+}
+
+.letter {
+    max-width: 760px;
+    margin: auto;
+    padding: clamp(25px, 5vw, 55px);
+    background: linear-gradient(145deg, #242052, #111832);
+    border: 1px solid #D6B97855;
+    border-radius: 8px;
+    box-shadow: 0 25px 70px #0005;
+    line-height: 2;
+    color: #E4E0EE;
+}
+
+.letter .distance {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 29px;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.letter h3 {
+    font-size: 30px;
+    color: var(--cream);
+    margin-bottom: 18px;
+}
+
+.letter p {
+    margin: 17px 0;
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+/* WISH CARDS */
+
+.wishes-section {
+    text-align: center;
+}
+
+.wish-grid {
+    max-width: 1000px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.wish-card {
+    min-height: 220px;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #242052, #111832);
+    border: 1px solid #D6B97855;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px #0005;
+    transition: .35s;
+    cursor: pointer;
+}
+
+.wish-card:hover {
+    transform: translateY(-9px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 45px #0007;
+}
+
+.wish-icon {
+    font-size: 31px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.wish-card h3 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.wish-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.reveal {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+/* PRAYER BOX */
+
+.prayer-section {
+    text-align: center;
+    background: radial-gradient(ellipse at center, #3B286B88, transparent 70%);
+}
+
+.prayer-box {
+    max-width: 760px;
+    margin: 40px auto 0;
+    padding: 40px 30px;
+    border: 1px solid #E7C98266;
+    background: #141735bb;
+    border-radius: 25px;
+    line-height: 2;
+    color: #E4E0EE;
+    box-shadow: 0 20px 60px #0004;
+}
+
+.prayer-box p {
+    margin: 17px 0;
+}
+
+/* FINAL */
+
+.final-section {
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, transparent, #080D25);
+}
+
+.final-section h2 {
+    font-size: clamp(48px, 9vw, 85px);
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.final-section p {
+    max-width: 600px;
+    color: var(--muted);
+    line-height: 2;
+    margin: 10px auto;
+}
+
+.final-signature {
+    margin-top: 65px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    color: var(--gold);
+    line-height: 1.8;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #BDB4D2;
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #050817dd;
+    backdrop-filter: blur(10px);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: min(500px, 100%);
+    padding: 45px 30px;
+    text-align: center;
+    background: linear-gradient(145deg, #29245F, #10152F);
+    border: 1px solid var(--gold);
+    border-radius: 22px;
+    box-shadow: 0 20px 70px #0009;
+    animation: appear .35s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: scale(.85); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+    color: var(--gold);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: var(--cream);
+    line-height: 2;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: var(--gold);
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* SPARKLES */
+
+.sparkle {
+    position: fixed;
+    pointer-events: none;
+    color: var(--gold);
+    opacity: .6;
+    animation: sparkle 4s linear infinite;
+    z-index: 1;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(0) scale(.5); opacity: 0; }
+    30% { opacity: .7; }
+    100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+}
+
+@media(max-width:700px) {
+    .wish-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .wish-card {
+        padding: 24px 12px;
+        min-height: 210px;
+    }
+
+    .balloon-one { left: 3%; }
+    .balloon-two { right: 3%; }
+    .balloon-three { right: 8%; }
+    .balloon-four { left: 5%; }
+
+    .cake-scene {
+        transform: scale(.9);
+        transform-origin: top center;
+        margin-bottom: -15px;
+    }
+}
+
+@media(max-width:420px) {
+    .wish-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 75px 18px;
+    }
+
+    .hero h1 {
+        font-size: 57px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="balloon balloon-one"></div>
+    <div class="balloon balloon-two"></div>
+    <div class="balloon balloon-three"></div>
+    <div class="balloon balloon-four"></div>
+
+    <div class="hero-content">
+        <div class="eyebrow">A birthday celebration</div>
+
+        <h1>
+            Happy Birthday
+            <span>A Beautiful New Chapter</span>
+        </h1>
+
+        <p>
+            Today is all about celebrating you, your dreams,
+            and the beautiful future waiting ahead.
+        </p>
+
+        <div class="small-flower">✿</div>
+
+        <a href="#letter" class="scroll-link">
+            A letter for you ✧
+        </a>
+    </div>
+
+    <!-- CSS 3D CAKE -->
+    <div class="cake-scene">
+        <div class="plate"></div>
+        <div class="bottom-cake"></div>
+        <div class="top-cake"></div>
+        <div class="frosting"></div>
+        <div class="drip"></div>
+
+        <div class="candle one"><div class="flame"></div></div>
+        <div class="candle two"><div class="flame"></div></div>
+        <div class="candle three"><div class="flame"></div></div>
+    </div>
+
+</section>
+
+<!-- LETTER -->
+<section class="letter-section" id="letter">
+
+    <div class="section-heading">
+        <div class="eyebrow">Words I wanted you to have</div>
+        <h2>A letter for you</h2>
+    </div>
+
+    <div class="letter">
+
+        <div class="distance">
+            To someone I wish well, even from a distance.
+        </div>
+
+        <h3>Dear you,</h3>
+
+        <p>
+            On your birthday, I wish I could send you all the
+            beautiful things that words cannot fully explain.
+            Since I cannot be there, I'm sending something just
+            as sincere: my prayers, my good wishes, and hope
+            for everything your heart is working toward.
+        </p>
+
+        <p>
+            I hope the coming years are gentle with you.
+            I hope your hard work turns into success, your plans
+            find their way into reality, and the doors you have
+            been waiting for open at the right time.
+        </p>
+
+        <p>
+            May you never feel that your efforts are wasted.
+            May you always find a reason to keep believing
+            in yourself, even on the days when everything
+            feels uncertain.
+        </p>
+
+        <p>
+            And if life ever becomes difficult, I hope you
+            remember that difficult chapters do not decide
+            the whole story. There are still so many beautiful
+            pages waiting for you.
+        </p>
+
+        <p>
+            Today, more than anything, I wish you a future
+            that makes you genuinely happy — a future filled
+            with peace, purpose, kindness, and the success
+            you deserve.
+        </p>
+
+        <div class="signature">
+            With sincere prayers, always.
+        </div>
+
+    </div>
+</section>
+
+<!-- WISHES -->
+<section class="wishes-section">
+
+    <div class="section-heading">
+        <div class="eyebrow">A few prayers for your journey</div>
+        <h2>Things I <i class="gold">wish for you</i></h2>
+        <p style="color:var(--muted);margin-top:15px">
+            Tap each little star. There is a prayer waiting inside.
+        </p>
+    </div>
+
+    <div class="wish-grid">
+
+        <div class="wish-card" onclick="showWish(0)">
+            <div class="wish-icon">✧</div>
+            <h3>Your Future</h3>
+            <p>May the road ahead bring you wonderful beginnings.</p>
+            <span class="reveal">REVEAL THE PRAYER</span>
+        </div>
+
+        <div class="wish-card" onclick="showWish(1)">
+            <div class="wish-icon">☾</div>
+            <h3>Your Peace</h3>
+            <p>May your heart find rest, even on hard days.</p>
+            <span class="reveal">REVEAL THE PRAYER</span>
+        </div>
+
+        <div class="wish-card" onclick="showWish(2)">
+            <div class="wish-icon">✦</div>
+            <h3>Your Success</h3>
+            <p>May your efforts bloom into something beautiful.</p>
+            <span class="reveal">REVEAL THE PRAYER</span>
+        </div>
+
+        <div class="wish-card" onclick="showWish(3)">
+            <div class="wish-icon">♡</div>
+            <h3>Your Protection</h3>
+            <p>May you always be safe and surrounded by goodness.</p>
+            <span class="reveal">REVEAL THE PRAYER</span>
+        </div>
+
+        <div class="wish-card" onclick="showWish(4)">
+            <div class="wish-icon">✿</div>
+            <h3>Your Dreams</h3>
+            <p>May every sincere hope find its way to you.</p>
+            <span class="reveal">REVEAL THE PRAYER</span>
+        </div>
+
+        <div class="wish-card" onclick="showWish(5)">
+            <div class="wish-icon">∞</div>
+            <h3>Your Happiness</h3>
+            <p>May joy come to you in ways you never expected.</p>
+            <span class="reveal">REVEAL THE PRAYER</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRAYER MODAL -->
+<div class="modal" id="wishModal" onclick="closeOutside(event)">
+    <div class="modal-content">
+        <button class="close" onclick="closeWish()">×</button>
+        <div class="wish-icon">✧</div>
+        <h2 id="modalTitle">A Prayer For You</h2>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<!-- ALLAH'S PRAYERS -->
+<section class="prayer-section">
+
+    <div class="section-heading">
+        <div class="eyebrow">For the future you deserve</div>
+        <h2>My prayers for you</h2>
+    </div>
+
+    <div class="prayer-box">
+
+        <p>
+            May Allah تعالیٰ bless your future with
+            <i class="gold">barakah</i>, guide every step you take,
+            and turn your sincere efforts into beautiful outcomes.
+        </p>
+
+        <p>
+            May He give you the strength to overcome what feels
+            impossible, the wisdom to choose what is right,
+            and the patience to wait for what is meant for you.
+        </p>
+
+        <p>
+            May your rizq be plentiful, your heart be peaceful,
+            your health be protected, and your life be surrounded
+            by people who bring out the best in you.
+        </p>
+
+        <p>
+            May Allah grant you more than you ask for,
+            in ways better than you imagine.
+            <i class="gold">Ameen.</i>
+        </p>
+
+    </div>
+</section>
+
+<!-- FINAL WISH -->
+<section class="final-section">
+
+    <div class="eyebrow">One last wish</div>
+
+    <h2>
+        May life be<br>
+        <i class="gold">kind to you.</i>
+    </h2>
+
+    <div class="small-flower">✧</div>
+
+    <p>
+        Happy Birthday. No matter how far away a wish is sent,
+        may it reach you with warmth. I hope this new year
+        of your life becomes a beautiful one.
+    </p>
+
+    <p style="margin-top:35px;color:var(--gold)">
+        A little birthday sparkle ✧
+    </p>
+
+    <div class="final-signature">
+        From<br>
+        - 8 - 1
+    </div>
+
+</section>
+
+<footer>
+    MADE WITH SINCERE WISHES · HAPPY BIRTHDAY
+</footer>
+
+<script>
+
+const wishes = [
+    {
+        title: "Your Future ✧",
+        text: "May Allah open beautiful doors for you, guide your decisions, and lead you towards a future filled with purpose, growth, and endless possibilities. Ameen."
+    },
+    {
+        title: "Your Peace ☾",
+        text: "May Allah remove every worry from your heart, replace your sadness with peace, and give you comfort on every difficult day. Ameen."
+    },
+    {
+        title: "Your Success ✦",
+        text: "May every sincere effort you make bring you closer to success. May your hard work be rewarded in ways that make you proud. Ameen."
+    },
+    {
+        title: "Your Protection ♡",
+        text: "May Allah protect you from every harm, keep you safe wherever life takes you, and surround you with sincere and kind people. Ameen."
+    },
+    {
+        title: "Your Dreams ✿",
+        text: "May Allah make the dreams in your heart a beautiful reality, and may what is written for you be even better than what you imagine. Ameen."
+    },
+    {
+        title: "Your Happiness ∞",
+        text: "May happiness find you in unexpected moments, may you always have reasons to smile, and may your heart never lose hope. Ameen."
+    }
+];
+
+function showWish(index) {
+    document.getElementById("modalTitle").textContent = wishes[index].title;
+    document.getElementById("modalText").textContent = wishes[index].text;
+    document.getElementById("wishModal").classList.add("active");
+}
+
+function closeWish() {
+    document.getElementById("wishModal").classList.remove("active");
+}
+
+function closeOutside(event) {
+    if (event.target.id === "wishModal") {
+        closeWish();
+    }
+}
+
+// Small floating sparkles
+function createSparkle() {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.textContent = "✧";
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = (60 + Math.random() * 35) + "vh";
+    sparkle.style.fontSize = (10 + Math.random() * 13) + "px";
+    sparkle.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 6000);
+}
+
+setInterval(createSparkle, 700);
+
+// Close modal with Escape key
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") closeWish();
+});
+
+</script>
+
+</body>
+</html>
